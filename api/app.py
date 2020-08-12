@@ -1,7 +1,11 @@
 from flask import Flask, jsonify
+import joblib
 
 
 app = Flask(__name__)
+
+model = joblib.load("../modelo_entrenado.pkl")
+print(model)
 
 @app.route('/ping')
 def ping():
