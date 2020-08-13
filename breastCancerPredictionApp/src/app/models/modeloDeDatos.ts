@@ -1,0 +1,32 @@
+export class ModeloDeDatos{
+    radio: number;
+    textura:number;
+    perimetro:number;
+    area:number;
+    suavidad:number;
+    compacidad:number;
+    concavidad:number;
+    puntos_concavos:number;
+    simetria:number;
+    dimension_fractal:number;
+    radio_se:number;
+    textura_se:number;
+    perimetro_se:number;
+    area_se:number;
+    suavidad_se:number;
+    compacidad_se:number;
+    concavidad_se:number;
+    puntos_concavos_se:number;
+    simetria_se:number;
+    dimension_fractal_se:number;
+    peor_radio:number;
+    peor_textura:number;
+    peor_perimetro:number;
+    peor_area:number;
+    peor_suavidad:number;
+    peor_compacidad:number;
+    peor_concavidad:number;
+    peores_puntos_concavos:number;
+    peor_simetria:number;
+    peor_dimension_fractal:number;
+}

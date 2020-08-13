@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Funcionamiento</mat-card-title>
+</mat-card>
+
+<mat-card>
+    <mat-card-title>Preguntas frecunetes</mat-card-title>
+    
+    <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false" 
+                             *ngFor="let p of preguntas">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{ p["pregunta"] }}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+                <p> {{ p["respuesta"] }} </p>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+</mat-card>

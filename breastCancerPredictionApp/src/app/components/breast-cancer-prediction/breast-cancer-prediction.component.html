@@ -1,0 +1,161 @@
+<mat-card>
+    <mat-card-title>Formulario</mat-card-title>
+    <form [formGroup]="datos">
+        <mat-form-field appearance="fill">
+            <mat-label>Radio</mat-label>
+            <input matInput type="number" class="example-right-align" id="radio" formControlName="radio" [(ngModel)]="modelo.radio">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Textura</mat-label>
+            <input matInput type="number" class="example-right-align" id="textura" formControlName="textura" [(ngModel)]="modelo.textura">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Perimetro</mat-label>
+            <input matInput type="number" class="example-right-align" id="perimetro" formControlName="perimetro" [(ngModel)]="modelo.perimetro">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Area</mat-label>
+            <input matInput type="number" class="example-right-align" id="area" formControlName="area" [(ngModel)]="modelo.area">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Suavidad</mat-label>
+            <input matInput type="number" class="example-right-align" id="suavidad" formControlName="suavidad" [(ngModel)]="modelo.suavidad">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Compacidad</mat-label>
+            <input matInput type="number" class="example-right-align" id="compacidad" formControlName="compacidad" [(ngModel)]="modelo.compacidad">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Concavidad</mat-label>
+            <input matInput type="number" class="example-right-align" id="concavidad" formControlName="concavidad" [(ngModel)]="modelo.concavidad">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Puntos concavos</mat-label>
+            <input matInput type="number" class="example-right-align" id="puntos_concavos" formControlName="puntos_concavos" [(ngModel)]="modelo.puntos_concavos">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Simetria</mat-label>
+            <input matInput type="number" class="example-right-align" id="simetria" formControlName="simetria" [(ngModel)]="modelo.simetria">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Dimension fractal</mat-label>
+            <input matInput type="number" class="example-right-align" id="dimension_fractal" formControlName="dimension_fractal" [(ngModel)]="modelo.dimension_fractal">
+        </mat-form-field>
+
+        <!---->
+        <mat-form-field appearance="fill">
+            <mat-label>Radio SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="radio_se" formControlName="radio_se" [(ngModel)]="modelo.radio_se">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Textura SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="textura_se" formControlName="textura_se" [(ngModel)]="modelo.textura_se">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Perimetro SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="perimetro_se" formControlName="perimetro_se" [(ngModel)]="modelo.perimetro_se">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Area SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="area_se" formControlName="area_se" [(ngModel)]="modelo.area_se">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Suavidad SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="suavidad_se" formControlName="suavidad_se" [(ngModel)]="modelo.suavidad_se">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Compacidad SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="compacidad_se" formControlName="compacidad_se" [(ngModel)]="modelo.compacidad_se">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Concavidad SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="concavidad_se" formControlName="concavidad_se" [(ngModel)]="modelo.concavidad_se">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Puntos concavos SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="puntos_concavos_se" formControlName="puntos_concavos_se" [(ngModel)]="modelo.puntos_concavos_se">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Simetria SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="simetria_se" formControlName="simetria_se" [(ngModel)]="modelo.simetria_se">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Dimension fractal SE</mat-label>
+            <input matInput type="number" class="example-right-align" id="dimension_fractal_se" formControlName="dimension_fractal_se" [(ngModel)]="modelo.dimension_fractal_se">
+        </mat-form-field>
+        <!---->
+        <mat-form-field appearance="fill">
+            <mat-label>Peor Radio</mat-label>
+            <input matInput type="number" class="example-right-align" id="peor_radio" formControlName="peor_radio" [(ngModel)]="modelo.peor_radio">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Peor Textura</mat-label>
+            <input matInput type="number" class="example-right-align" id="peor_textura" formControlName="peor_textura" [(ngModel)]="modelo.peor_textura">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Peor Perimetro</mat-label>
+            <input matInput type="number" class="example-right-align" id="peor_perimetro" formControlName="peor_perimetro" [(ngModel)]="modelo.peor_perimetro">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Peor Area</mat-label>
+            <input matInput type="number" class="example-right-align" id="peor_area" formControlName="peor_area" [(ngModel)]="modelo.peor_area">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Peor Suavidad</mat-label>
+            <input matInput type="number" class="example-right-align" id="peor_suavidad" formControlName="peor_suavidad" [(ngModel)]="modelo.peor_suavidad">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Peor Compacidad</mat-label>
+            <input matInput type="number" class="example-right-align" id="peor_compacidad" formControlName="peor_compacidad" [(ngModel)]="modelo.peor_compacidad">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Peor Concavidad</mat-label>
+            <input matInput type="number" class="example-right-align" id="peor_concavidad" formControlName="peor_concavidad" [(ngModel)]="modelo.peor_concavidad">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Peores Puntos concavos</mat-label>
+            <input matInput type="number" class="example-right-align" id="peores_puntos_concavos" formControlName="peores_puntos_concavos" [(ngModel)]="modelo.peores_puntos_concavos">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Peor Simetria</mat-label>
+            <input matInput type="number" class="example-right-align" id="peor_simetria" formControlName="peor_simetria" [(ngModel)]="modelo.peor_simetria">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Peor Dimension fractal</mat-label>
+            <input matInput type="number" class="example-right-align" id="peor_dimension_fractal" formControlName="peor_dimension_fractal" [(ngModel)]="modelo.peor_dimension_fractal">
+        </mat-form-field>
+        <!---->
+        <div class="division">
+            <button mat-raised-button disabled *ngIf="datos.invalid">Enviar</button>
+            <button mat-raised-button color="primary" type="submit" *ngIf="datos.valid">Enviar</button>
+        </div>
+    </form>
+</mat-card>
+
