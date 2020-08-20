@@ -51,7 +51,6 @@ for i in range(3):
 pred = model.predict(X_test)
 print(pred)
 print()
-print(Y_test)
 
 
 joblib.dump(model, 'modelo_entrenado.pkl')
