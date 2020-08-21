@@ -28,5 +28,5 @@ export class ModeloDeDatos{
     peor_concavidad:number;
     peores_puntos_concavos:number;
     peor_simetria:number;
-    peor_dimension_fractal:number;
+    //peor_dimension_fractal:number;
 }

@@ -1,6 +1,6 @@
 <mat-card>
     <mat-card-title>Formulario</mat-card-title>
-    <form [formGroup]="datos">
+    <form [formGroup]="datos" (ngSubmit)="submit()">
         <mat-form-field appearance="fill">
             <mat-label>Radio</mat-label>
             <input matInput type="number" class="example-right-align" id="radio" formControlName="radio" [(ngModel)]="modelo.radio">
@@ -147,14 +147,13 @@
             <input matInput type="number" class="example-right-align" id="peor_simetria" formControlName="peor_simetria" [(ngModel)]="modelo.peor_simetria">
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <!--<mat-form-field appearance="fill">
             <mat-label>Peor Dimension fractal</mat-label>
             <input matInput type="number" class="example-right-align" id="peor_dimension_fractal" formControlName="peor_dimension_fractal" [(ngModel)]="modelo.peor_dimension_fractal">
-        </mat-form-field>
+        </mat-form-field>-->
         <!---->
         <div class="division">
-            <button mat-raised-button disabled *ngIf="datos.invalid">Enviar</button>
-            <button mat-raised-button color="primary" type="submit" *ngIf="datos.valid">Enviar</button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="datos.invalid">Enviar</button>
         </div>
     </form>
 </mat-card>

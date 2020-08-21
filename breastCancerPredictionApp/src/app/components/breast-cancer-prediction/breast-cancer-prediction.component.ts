@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { ModeloDeDatos } from '../../models/modeloDeDatos'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ModeloDeDatos } from '../../models/modeloDeDatos';
+import { MatSnackBar, SimpleSnackBar } from '@angular/material/snack-bar';
+import { CancerPredictionService } from '../../services/cancer-prediction.service'
 
 @Component({
   selector: 'app-breast-cancer-prediction',
@@ -11,7 +13,7 @@ export class BreastCancerPredictionComponent implements OnInit {
   modelo: ModeloDeDatos = new ModeloDeDatos();
   datos: FormGroup
 
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder, private _cps: CancerPredictionService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.datos = this._formBuilder.group({
@@ -43,9 +45,58 @@ export class BreastCancerPredictionComponent implements OnInit {
       "peor_compacidad": [this.modelo.peor_compacidad, [Validators.required, Validators.min(0.0001)]],
       "peor_concavidad": [this.modelo.peor_concavidad, [Validators.required, Validators.min(0.0001)]],
       "peores_puntos_concavos": [this.modelo.peores_puntos_concavos, [Validators.required, Validators.min(0.0001)]],
-      "peor_simetria": [this.modelo.peor_simetria, [Validators.required, Validators.min(0.0001)]],
-      "peor_dimension_fractal": [this.modelo.peor_dimension_fractal, [Validators.required, Validators.min(0.0001)]]
+      "peor_simetria": [this.modelo.peor_simetria, [Validators.required, Validators.min(0.0001)]]/*,
+      "peor_dimension_fractal": [this.modelo.peor_dimension_fractal, [Validators.required, Validators.min(0.0001)]]*/
     })
   }
 
+  public submit(): void {
+    let data: number[] = [
+      this.modelo.radio,
+      this.modelo.textura,
+      this.modelo.perimetro,
+      this.modelo.area,
+      this.modelo.suavidad,
+      this.modelo.compacidad,
+      this.modelo.concavidad,
+      this.modelo.puntos_concavos,
+      this.modelo.simetria,
+      this.modelo.dimension_fractal,
+      this.modelo.radio_se,
+      this.modelo.textura_se,
+      this.modelo.perimetro_se,
+      this.modelo.area_se,
+      this.modelo.suavidad_se,
+      this.modelo.compacidad_se,
+      this.modelo.concavidad_se,
+      this.modelo.puntos_concavos_se,
+      this.modelo.simetria_se,
+      this.modelo.dimension_fractal_se,
+      this.modelo.peor_radio,
+      this.modelo.peor_textura,
+      this.modelo.peor_perimetro,
+      this.modelo.peor_area,
+      this.modelo.peor_suavidad,
+      this.modelo.peor_compacidad,
+      this.modelo.peor_concavidad,
+      this.modelo.peores_puntos_concavos,
+      this.modelo.peor_simetria
+    ];
+    let pred = "";
+    this._cps.predecir(data).subscribe(
+      res => {
+        pred = res["request"];
+        console.log(pred);
+      }, err => {
+        console.error(err);
+      }
+    );
+    this.openSnackBar(pred);
+  }
+
+  openSnackBar(prediccion: string) {
+    this._snackBar.open(`La predicción es: ${prediccion}`, "cerrar", {
+      duration: 4000,
+    });
+  }
 }
