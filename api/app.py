@@ -12,7 +12,7 @@ print(model)
 def ping():
     return jsonify({"message": 'Conected'})
 
-@app.route('/breast_cancer_prediction')
+@app.route('/breast_cancer_prediction', methods=["POST"])
 def breast_cancer_prediction():
     ddp = request.json
     arr = sc.fit_transform([ddp["datos"]])
